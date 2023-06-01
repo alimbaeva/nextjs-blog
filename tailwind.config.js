@@ -15,6 +15,12 @@ module.exports = {
       },
       backgroundImage: {
       },
+      spacing: {
+        '3r': '3.5rem',
+        '4r': '4.5rem',
+        '5r': '5.5rem',
+        '9r': '9.5rem',
+      },
     },
   },
   plugins: [],

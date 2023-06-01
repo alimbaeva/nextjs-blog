@@ -70,7 +70,7 @@ const layout: FC<Props> = ({children, home }) => {
           <main>{children}</main>
           {home && (
             <div className={styles.backToHome}>
-              <Link href="/">← Back to home</Link>
+            <Link className={'m-9r'} href="/">← Back to home</Link>
             </div>
           )}
           <Footer />
