@@ -1,9 +1,11 @@
-import { ReactNode, FC } from 'react'
+import { ReactNode, FC, useState, useEffect } from 'react'
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
+import Header from '../sections/Header';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
+import Footer from '@/sections/Footer';
 
 type Props = { 
     children: ReactNode;
@@ -31,6 +33,7 @@ const layout: FC<Props> = ({children, home }) => {
             <meta name="og:title" content={siteTitle} />
             <meta name="twitter:card" content="summary_large_image" />
           </Head>
+          <Header />
           <header className={styles.header}>
             {home ? (
               <>
@@ -65,11 +68,12 @@ const layout: FC<Props> = ({children, home }) => {
             )}
           </header>
           <main>{children}</main>
-          {!home && (
+          {home && (
             <div className={styles.backToHome}>
               <Link href="/">← Back to home</Link>
             </div>
           )}
+          <Footer />
         </div>
     )
 }

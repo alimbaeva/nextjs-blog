@@ -3,19 +3,17 @@ import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 import { getSortedPostsData } from '../../lib/posts';
+import { Lora } from '@next/font/google'
 import Date from '../components/date';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
-  // console.log(allPostsData);
   return {
     props: {
       allPostsData,
     },
   };
 }
-
-// const inter = Inter({ subsets: ['latin'] })
 
 export type Prop = {
     id: string;
@@ -26,14 +24,19 @@ type Props = {
   allPostsData: Prop[]
 }
 
+const lora = Lora({
+  subsets: ['latin'],
+  variable: '--font-lora',
+})
+
 export default function Home({ allPostsData }: Props) {
   return (
-    <Layout home>
+    <Layout home={false}>
     <Head>
       <title>{siteTitle}</title>
     </Head>
     <section className={utilStyles.headingMd}>
-      <p>[Your Self Introduction]</p>
+      <p className={`${lora.variable} font-lora`}>Например, создайте fonts.ts файл в styles папке в корневом каталоге вашего приложения.</p>
       <p>
         (This is a sample website - you’ll be building a site like this on{' '}
         <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
@@ -55,7 +58,7 @@ export default function Home({ allPostsData }: Props) {
             </li>
           ))}
         </ul>
-      </section>
+    </section>
   </Layout>
 
   )

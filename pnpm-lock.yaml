@@ -1,6 +1,8 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@heroicons/react': ^2.0.18
+  '@next/font': ^13.4.4
   '@types/node': 20.2.4
   '@types/react': 18.2.7
   '@types/react-dom': 18.2.4
@@ -10,6 +12,7 @@ specifiers:
   eslint-config-next: 13.4.4
   gray-matter: ^4.0.3
   next: 13.4.4
+  next-themes: ^0.2.1
   postcss: 8.4.23
   react: 18.2.0
   react-dom: 18.2.0
@@ -19,6 +22,8 @@ specifiers:
   typescript: 5.0.4
 
 dependencies:
+  '@heroicons/react': 2.0.18_react@18.2.0
+  '@next/font': 13.4.4
   '@types/node': 20.2.4
   '@types/react': 18.2.7
   '@types/react-dom': 18.2.4
@@ -28,6 +33,7 @@ dependencies:
   eslint-config-next: 13.4.4_opaykosi7ysrbskpnffskmbrki
   gray-matter: 4.0.3
   next: 13.4.4_biqbaboplfbrettd7655fr4n2y
+  next-themes: 0.2.1_z4pol2qj2yv3um3jqqobs4b3eu
   postcss: 8.4.23
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -85,6 +91,14 @@ packages:
   /@eslint/js/8.41.0:
     resolution: {integrity: sha512-LxcyMGxwmTh2lY9FwHPGWOHmYFCZvbrFCBZL4FzSSsxsRPuhrYUg/49/0KDfW8tnIEaEHtfmn6+NPN+1DqaNmA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    dev: false
+
+  /@heroicons/react/2.0.18_react@18.2.0:
+    resolution: {integrity: sha512-7TyMjRrZZMBPa+/5Y8lN0iyvUU/01PeMGX2+RE7cQWpEUIcb4QotzUObFkJDejj/HUH4qjP/eQ0gzzKs2f+6Yw==}
+    peerDependencies:
+      react: '>= 16'
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /@humanwhocodes/config-array/0.11.8:
@@ -149,6 +163,10 @@ packages:
     resolution: {integrity: sha512-5jnh7q6I15efnjR/rR+/TGTc9hn53g3JTbEjAMjmeQiExKqEUgIXqrHI5zlTNlNyzCPkBB860/ctxXheZaF2Vw==}
     dependencies:
       glob: 7.1.7
+    dev: false
+
+  /@next/font/13.4.4:
+    resolution: {integrity: sha512-iYmL/O0rV9NS8a2UXuRoZOzImz8Q0mM8bAmxtj8nccrpwZ6iOOZlbf2d0Genczl4wtuXRXVPR8goGjJM4C2SDg==}
     dev: false
 
   /@next/swc-darwin-arm64/13.4.4:
@@ -2329,6 +2347,18 @@ packages:
 
   /natural-compare/1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
+    dev: false
+
+  /next-themes/0.2.1_z4pol2qj2yv3um3jqqobs4b3eu:
+    resolution: {integrity: sha512-B+AKNfYNIzh0vqQQKqQItTS8evEouKD7H5Hj3kmuPERwddR2TxvDSFZuTj6T7Jfn1oyeUyJMydPl1Bkxkh0W7A==}
+    peerDependencies:
+      next: '*'
+      react: '*'
+      react-dom: '*'
+    dependencies:
+      next: 13.4.4_biqbaboplfbrettd7655fr4n2y
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /next/13.4.4_biqbaboplfbrettd7655fr4n2y:
